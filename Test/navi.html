@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+    font-family: "Times New Roman", Times, serif;
+}
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #f1f1f1;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidenav a {
+    padding: 8px 16px;
+    text-decoration: none;
+    font-size: 15px;
+    color: #000;
+    display: block;
+    transition: 0.3s;
+}
+
+.dropbtn {
+  background-color: #f1f1f1;
+  color: #000;
+  padding-top: 8px 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  /* width:500px; */
+}
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown .dropbtn {
+    font-size: 16px;    
+    border: none;
+    outline: none;
+    color: #000;
+    padding: 8px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+    /* min-width: 270px  INI PENYEBAB 5.0 JADI ADA RUANG KOSONG KAT TEPI */
+
+    
+}
+
+.sidenav a:hover, .dropdown:hover .dropbtn {
+    color: #f1f1f1;
+    background-color: #00A19C;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    width:250px;
+}
+
+.dropdown-content a {
+    float: none;
+    color: black;
+    padding: 8px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover {
+    /* background-color: #f1f1f1; INI PENYEBAB BILA HOVER JADI TAK NAMPAK 5.1 HINGGA 5.8 */
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+  background-color: #00A19C;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+</style>
+</head>
+<body>
+
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="#">1.0 PURPOSES</a>
+  <a href="#">2.0 SCOPE</a>
+  <a href="#">3.0 REFERENCES</a>
+  <a href="#">4.0 ABBREVIATIONS AND DEFINITIONS</a>
+  <div class="dropdown">
+    <button class="dropbtn">5.0 PROCEDURES</button>
+    <div class="dropdown-content">
+      <a href="#">5.1 Overview of GHRM Project Portfolio Management Framework</a>
+      <a href="#">5.2 Project Pre-Execution Stage</a>
+      <a href="#">5.3 Project Execution Stage</a>
+      <a href="#">5.4 Project Execution and Implementation</a>
+      <a href="#">5.5 Project Execution - Change Request</a>
+      <a href="#">5.6 Project Risk and Issues</a>
+      <a href="#">5.7 Project Assessment</a>
+      <a href="#">5.8 Project Closing Stage</a>
+
+</div>
+
+</div>
+<a href="#">6.0 CONTROL OF RECORDS</a>
+<a href="#">7.0 ATTACHMENTS</a>
+</div>
+
+<span style="font-size:15px;cursor:pointer" onclick="openNav()">&#9776; Menu</span>
+
+<script>
+function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+}
+
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+}
+</script>
+     
+</body>
+</html> 

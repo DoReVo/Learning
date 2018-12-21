@@ -1,0 +1,36 @@
+.MainArea{
+
+    display:grid;
+    justify-items: center;
+    color:white;
+
+}
+
+.twoArea{
+    margin-top: 50px;
+    display:grid;
+    justify-items: center;
+    color:white;
+
+}
+
+body{
+    background-color: black;
+}
+
+.trdArea{
+    
+    margin-top: 50px;
+    display:grid;
+    justify-items: center;
+    color:white;
+    grid-template-columns: repeat(5,auto);
+
+}
+
+.frthArea{
+    margin-top: 50px;
+    display:grid;
+    justify-items: center;
+    color:white;
+}

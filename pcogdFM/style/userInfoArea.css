@@ -1,0 +1,20 @@
+.userInfoArea {
+  display: grid;
+  grid-template-rows: repeat(10, auto);
+  grid-template-columns: repeat(10, auto);
+  grid-row: 1/1;
+  grid-column: 2/2;
+  background-color: rgb(3, 121, 115);
+  height: 50%;
+  width: 100%;
+  justify-self: center;
+  align-self: center;
+}
+
+.userInfoArea label:nth-child(odd) {
+  grid-column: 1/1;
+}
+
+.userInfoArea label:nth-child(even) {
+  grid-column: 2/2;
+}

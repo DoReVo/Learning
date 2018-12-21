@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <script src="src/jquery-3.3.1.js"></script>
+    <script src="src/js.cookie.js"></script>
+    <script src="src/globalVar.js"></script>
+    <script src="src/docReady.js"></script>
+    <script src="src/interactionMethods.js"></script>
+    <script src="src/helperMethods.js"></script>
+    <script src="src/Scriptz.js"></script>
+    
+    <link rel="stylesheet" type="text/css" href="style/Stylez.css" >
+    <link rel="stylesheet" type="text/css" href="style/formStyle.css" >
+    <link rel="stylesheet" type="text/css" href="style/devArea.css" >
+    <link rel="stylesheet" type="text/css" href="style/userInfoArea.css" >
+</head>
+
+
+<body>
+
+
+
+
+
+    <div id="header" class="header">
+
+        <div class="headerText">PCOGD Facilities Management </div>
+
+    </div>
+
+
+    <div class="mainAreaWrapper">
+        <div class="mainArea">
+            <!--mainArea Start-->
+            <div id="infoArea" class="infoArea">
+                <div>PM : Preventative Maintenance</div>
+                <div>RM : Reactive Maintenance</div>
+                <div>VI : Visual Inspection</div>
+                <div>RS: Repair & Service</div>
+                <div>RP : Replace</div>
+                <div>HK : Housekeeping</div>
+                <div>UC : Unclogging</div>
+                <div>PT : Painting</div>    
+                <div>SL : Sealing</div>
+            </div>
+            <div class="formArea">
+                <!--formArea Div Start-->
+
+                <div class="formDataArea">
+                    <!--formDataArea Start-->
+                    <!-- <div class="formTitleLine">
+                    <div>Building Maintenance Activity Report</div>
+                </div> -->
+
+                    <div class="switchBtnLine">
+                        <div>New</div>
+
+                        <label class="switch">
+                            <input id="checkBox" type="checkbox" onclick="changeAction()">
+                            <span class="slider round"></span>
+                        </label>
+
+                        <!-- <input type="checkbox" id="testCheckBox" onclick="changeAction()"> -->
+
+                        <div>Update</div>
+                        <!-- <input type="button" class="devButton" value="Developer's" onclick="devAreaToggle()"> -->
+                        <input id="helpBtn" class="helpBtn" type="button" value="Help" onclick="helpAreaToggle()">
+                    </div>
+
+                    <div class="workTitleLine">
+                        <div id="WorkTitle" class="workTitleDT">*Work Title</div>
+                        <input class="workTitleInput" type="text" id="wTitleBox">
+                        <!--INPUT-->
+                        <div id="Type1" class="typeDT">*Type</div>
+                        <select class="type1Input" id="type1Box">
+                            <!--INPUT-->
+                            <option disabled selected></option>
+                            <option value="PM">PM</option>
+                            <option value="RM">RM</option>
+                        </select>
+
+                        <select class="type2Input" id="type2Box">
+                            <!--INPUT-->
+                            <option disabled selected></option>
+                            <option value="VI">VI</option>
+                            <option value="RS">RS</option>
+                            <option value="RP">RP</option>
+                            <option value="HK">HK</option>
+                            <option value="UC">UC</option>
+                            <option value="PT">PT</option>
+                            <option value="SL">SL</option>
+                        </select>
+
+                    </div>
+
+                    <div class="descriptionLine">
+                        <div id="Description" class="descriptionDT">*Description</div>
+                        <textarea id="descriptionBox" rows="5" cols="50" class="item2"></textarea>
+                        <!--INPUT-->
+                    </div>
+
+                    <div class="locationLine">
+                        <div id="Location" class="locationDT">*Location</div>
+                        <input id="locationBox" class="locationBox" type="text">
+                        <!--INPUT-->
+                        <div id="Status" class="statusDT">*Status</div>
+                        <select id="statusBox" class="statusBox">
+                            <!--INPUT-->
+                            <option disabled selected></option>
+                            <option selected="selected" value="New">New</option>
+                            <option value="Reviewed">Reviewed</option>
+                            <option value="In Progress">In Progress</option>
+                            <option value="Closed">Closed</option>
+                        </select>
+
+                    </div>
+
+                    <div class="companyLine">
+                        <div id="Company" class="companyDT">Company</div>
+                        <input id="companyBox" class="companyBox" type="text">
+                        <!--INPUT-->
+                        <div id="SAP#" class="sapDT">SAP#</div>
+                        <select id="sapChoice" class="sapChoice">
+                            <option selected></option>>
+                            <option >Yes</option>>
+                            <option >No</option>>
+                  
+                        </select>
+                        <input id="sapBox" class="sapBox" type="text">
+                        <!--INPUT-->
+                    </div>
+
+                    <div class="requestByLine">
+                        <div id="RequestBy" class="requestByDT">*Request By</div>
+                        
+                        <select id="requestbyBox" class="requestByBox" type="text"> 
+                            <option id="defReqByOption" disable selected></option>
+                            <option value="Aqil">Aqil</option>
+                            <option value="Amirul">Amirul</option>
+                            <option value="Zamri">Zamri</option>
+                            <option value="Kamarulzaman">Kamarulzaman</option>
+                            <option value="Malina">Malina</option>
+                            
+                        </select>
+                        <!--INPUT-->
+                        <div id="RequestDate" class="requestDateDT">*Request Date</div>
+                        <input id="requestdateBox" class="requestDateBox" type="Date">
+                        <!--INPUT-->
+                    </div>
+
+                    <div class="closedByLine">
+                        <div id="ClosedBy" class="closedByDT">Closed By</div>
+                        <select id="closedbyBox" class="closedByBox" type="text">
+                            <option disabled selected></option>
+                            <option value="Aqil">Aqil</option>
+                            <option value="Amirul">Amirul</option>
+                            <option value="Zamri">Zamri</option>
+                            <option value="Kamarulzaman">Kamarulzaman</option>
+                            <option value="Malina">Malina</option>
+                        </select>
+                        <!--INPUT-->
+                        <div id="CompletionDate" class="completionDateDT">Completion Date</div>
+                        <input id="completiondateBox" class="completionDateBox" type="date">
+                        <!--INPUT-->
+                    </div>
+                </div>
+                <!--formDataArea End-->
+
+
+
+                <div class="formBtnArea">
+                    <!--formBtnArea Start-->
+
+                    <input id="searchButton" class="ovalButton" type="button" value="SEARCH" onclick="retrieve()">
+                    <input id="editButton" class="ovalButton" type="button" value="EDIT">
+                    <input id="deleteButton" class="ovalButton" type="button" value="DELETE">
+                    <input id="saveButton" class="ovalButton" type="button" value="SAVE" onclick="Validation()">
+                    <input id="resetButton" class="ovalButton" type="button" value="RESET" onclick="Reset()">
+                    <!-- <input id="testButton"class="ovalButton" type="button" value="TEST" onclick="testing()"> -->
+
+                </div>
+                <!--formBtnArea End-->
+
+            </div>
+            
+
+
+        </div>
+        <!--mainArea End-->
+
+    </div>
+
+    <div class="alertDivision">
+        <div id="alertMsg" class="alertMsg"></div>
+    </div>
+
+
+    <div id="outputDivision" class="outputDivision">
+
+
+        <table id="outputTable" class="outputTable">
+
+            <tr>
+                <th>FM No</th>
+                <th>Work title</th>
+                <th>Type 1</th>
+                <th>Type 2</th>
+                <th>Description</th>
+                <th>Location</th>
+                <th>Status</th>
+                <th>Company</th>
+                <th>SAP#</th>
+                <th>Request By</th>
+                <th>Request Date</th>
+                <th>Closed By</th>
+                <th>Complete Date</th>
+            </tr>
+
+        </table>
+
+    </div>
+
+
+
+    </div>
+
+</body>
+
+
+</html>

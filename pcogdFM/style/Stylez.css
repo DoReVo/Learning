@@ -1,0 +1,340 @@
+body {
+  display: -ms-grid;
+  display: grid;
+  background-color: black;
+  grid-template-rows: repeat(3, auto);
+  -ms-grid-rows: repeat(3, auto);
+  background-image: url("../image/mainBg2.jpg");
+  font-family: "Cambria", Georgia, Times, Times New Roman, serif;
+  /* font-weight: bold; */
+}
+
+.mainArea {
+  display: -ms-grid;
+  display: grid;
+  /* justify-items: right; */
+  justify-items: center;
+  grid-template-columns: 10% 10% auto 10% 10%;
+  -ms-grid-columns: 10% 10% auto 10% 10%;
+}
+
+.mainAreaWrapper {
+  background-color: rgba(24, 87, 82, 0.5);
+  -webkit-border-radius: 25px;
+  border-radius: 25px;
+  width: 95%;
+  -ms-grid-column-align: center;
+  justify-self: center;
+}
+
+.header {
+  display: -ms-grid;
+  display: grid;
+  justify-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  height: 75px;
+  background-color: rgba(24, 87, 82, 0.5);
+  -webkit-border-radius: 25px;
+  border-radius: 25px;
+  -webkit-box-shadow: 1px 1px 10px black;
+  box-shadow: 1px 1px 10px black;
+  margin-bottom: 20px;
+}
+
+.header div {
+  color: rgb(212, 233, 215);
+  font-size: 50px;
+  font-weight: bold;
+}
+
+.formTitleLine {
+  display: -ms-grid;
+  display: grid;
+  grid-template-rows: auto;
+  -ms-grid-rows: auto;
+  -ms-grid-column-align: center;
+  justify-self: center;
+
+  margin-bottom: 20px;
+}
+
+.alertDivision {
+  display: -ms-grid;
+  display: grid;
+}
+.alertMsg {
+  grid-template-rows: auto;
+  -ms-grid-rows: auto;
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  color: white;
+  margin-bottom: 50px;
+  margin-top: 10px;
+}
+
+.outputDivision {
+  color: white;
+  display: -ms-grid;
+  display: grid;
+  /* grid-template-columns: repeat(12, auto); */
+  /* justify-content: center; */
+  /* justify-items: center; */
+  /* overflow-x: auto; */
+}
+
+.outputTable {
+  color: white;
+  width: 100%;
+  /* max-width: 1500px; */
+  border-spacing: 0px;
+  word-wrap: break-word;
+  table-layout: fixed;
+  text-align: center;
+}
+
+/* FM NO */
+th:nth-child(1) {
+  width: 2%;
+  max-width: 3.5%;
+}
+
+/* Type */
+th:nth-child(4),
+th:nth-child(3) {
+  width: 2.6%;
+  max-width: 4%;
+}
+
+/* Status */
+th:nth-child(7) {
+  width: 4%;
+  max-width: 5%;
+}
+/* Company */
+th:nth-child(8) {
+  width: 7.9%;
+  max-width: 8.5%;
+}
+/* SAP */
+th:nth-child(9) {
+  width: 4.5%;
+  max-width: 5%;
+}
+
+/* Requester */
+th:nth-child(10) {
+  width: 5.83%;
+  max-width: 6.5%;
+}
+/* Description */
+th:nth-child(5) {
+  width: 34.48%;
+  max-width: 35%;
+}
+/* Request Date */
+th:nth-child(11) {
+  width: 4.77%;
+  max-width: 5.5%;
+}
+/* closedBy */
+th:nth-child(12) {
+  width: 5.83%;
+  max-width: 6.5%;
+}
+/* Request Date */
+th:nth-child(13) {
+  width: 4.77%;
+  max-width: 5.5%;
+}
+
+table,
+tbody,
+tr,
+td,
+th {
+  border-collapse: collapse;
+  border: 2.5px solid rgba(255, 255, 255, 0.267);
+}
+
+tr {
+  background-color: rgba(24, 87, 82, 0.74);
+}
+
+/* tr:nth-child(even) {
+  background-color: rgb(38, 131, 123);
+} */
+
+tr:hover {
+  background-color: rgb(65, 139, 133);
+}
+
+.outputTable tr th {
+  background-color: rgb(29, 27, 25);
+}
+
+.switchBtnLine div {
+  margin-left: 10px;
+  margin-right: 10px;
+  /* margin-bottom: 25px; */
+  font-weight: bold;
+}
+
+.switchBtnLine {
+  margin-bottom: 25px;
+}
+
+.devButton {
+  -ms-grid-column: 4;
+  grid-column: 4/4;
+  -ms-grid-column-align: right;
+  justify-self: right;
+}
+
+/* The switch - the box around the slider */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 20px;
+}
+
+.switchBtnLine label {
+  -ms-grid-column-align: center;
+  justify-self: center;
+  -ms-flex-item-align: end;
+  -ms-grid-row-align: end;
+  -webkit-align-self: end;
+  align-self: end;
+}
+.switchBtnLine div:first-child {
+  -ms-grid-column-align: center;
+  justify-self: center;
+  grid-column: 3/3;
+  grid-row: 1/1;
+  /* margin-left: 80%; */
+  padding-left: 50%;
+}
+.switchBtnLine div:nth-child(3) {
+  -ms-grid-column-align: center;
+  justify-self: center;
+  grid-column: 5/5;
+  grid-row: 1/1;
+  /* margin-right: 80%; */
+  padding-right: 25%;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 1;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #2196f3;
+  -webkit-transition: 0.4s;
+  -o-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 20px;
+  width: 26px;
+  left: 0px;
+  bottom: 0px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  -o-transition: 0.4s;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: #2196f3;
+}
+
+input:focus + .slider {
+  -webkit-box-shadow: 0 0 1px #2196f3;
+  box-shadow: 0 0 1px #2196f3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  -webkit-border-radius: 34px;
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+}
+
+input {
+  background-color: rgb(100, 98, 98);
+  color: white;
+  font-weight: 600;
+}
+
+select {
+  background-color: rgb(100, 98, 98);
+  color: white;
+  font-weight: 600;
+}
+
+textarea {
+  background-color: rgb(100, 98, 98);
+  color: white;
+  font-weight: 600;
+}
+
+.select {
+  background-color: rgb(65, 139, 133);
+}
+
+.infoArea {
+  margin-top: 40px;
+  margin-left: 5px;
+  -ms-grid-row: 1;
+  grid-row: 1/1;
+  background-color: rgb(3, 121, 115);
+  -ms-grid-column: 4;
+  grid-column: 4/4;
+  /* border-radius: 50px; */
+  -ms-grid-column-align: center;
+  justify-self: center;
+  -ms-flex-item-align: center;
+  -ms-grid-row-align: center;
+  -webkit-align-self: center;
+  align-self: center;
+  width: 130%;
+  height: 40%;
+  -webkit-box-shadow: 1px 1px 25px black;
+  box-shadow: 1px 1px 25px black;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  font-weight: 650;
+  text-align: left;
+  color: black;
+  display: none;
+}
